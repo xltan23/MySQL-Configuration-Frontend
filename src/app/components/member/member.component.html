@@ -1,0 +1,51 @@
+<form [formGroup]="postForm" (ngSubmit)="processPostForm()">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>
+                <input type="text" size="30" placeholder="Name" formControlName="name">
+            </td>
+        </tr>
+        <tr>
+            <td>Telegram:</td>
+            <td>
+                <input type="text" size="30" placeholder="Telegram" formControlName="telegram">
+            </td>
+        </tr>
+        <tr>
+            <td>Grade:</td>
+            <td>
+                <input type="text" size="30" placeholder="Grade" formControlName="grade">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">POST</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<span>{{telegram}}</span>
+<br>
+<span>{{grade}}</span>
+<br>
+<span>{{date}}</span>
+
+<form [formGroup]="getForm" (ngSubmit)="processGetForm()">
+    <table>
+        <tr>
+            <td>Search member by telegram:</td>
+            <td>
+                <input type="text" size="30" formControlName="telegram">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit">GET</button>
+            </td>
+        </tr>
+    </table>
+</form>
